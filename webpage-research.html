@@ -105,11 +105,11 @@ body.classic-mode .cli-view{display:none}
 @media(max-width:600px){.wrapper{padding:16px 14px 60px}.hero-name{font-size:20px}.mode-toggle{top:12px;right:14px}.nav-tabs{gap:4px}.nav-tab{padding:5px 10px;font-size:10.5px}}
 </style>
 </head>
-<body>
+<body class="classic-mode">
 <div class="mode-toggle">
-  <span class="mode-label active" id="lbl-cli" onclick="setMode('cli')">CLI</span>
+  <span class="mode-label" id="lbl-cli" onclick="setMode('cli')">CLI</span>
   <div class="toggle-track" onclick="toggleMode()"><div class="toggle-thumb"></div></div>
-  <span class="mode-label" id="lbl-classic" onclick="setMode('classic')">Classic</span>
+  <span class="mode-label active" id="lbl-classic" onclick="setMode('classic')">Classic</span>
 </div>
 <div class="wrapper">
   <div class="cli-view">
@@ -137,30 +137,6 @@ body.classic-mode .cli-view{display:none}
         </div>
         <div class="section-cmd" id="cli-section-cmd"><span class="prompt-symbol">&#10095; </span><span class="cmd-exec">ls -la research/ --sort=date</span></div>
         <div id="papers-container"></div>
-        <div class="neofetch">
-          <div class="neofetch-cmd"><span class="prompt-symbol">&#10095; </span><span class="cmd-exec">neofetch --researcher</span></div>
-          <div class="neofetch-grid">
-            <span class="nf-key">OS</span><span class="nf-val">PhD Candidate v6.0 (2020&#8211;)</span>
-            <span class="nf-key">Host</span><span class="nf-val">NYU Wilf Family Dept. of Politics</span>
-            <span class="nf-key">Kernel</span><span class="nf-val">Executive Politics &#215; Computational Social Science</span>
-            <span class="nf-key">Uptime</span><span class="nf-val">BA/MA Yonsei &#8594; ROK Air Force &#8594; NYU</span>
-            <span class="nf-key">Packages</span><span class="nf-val">R, Python, Stata, LaTeX, LLM APIs</span>
-            <span class="nf-key">Methods</span><span class="nf-val">Causal Inference &#183; Text-as-Data &#183; Multimodal</span>
-            <span class="nf-key">Awards</span><span class="nf-val">Downs Prize &#8217;24 &#183; Presidential Archives &#8217;25</span>
-            <span class="nf-key">Shell</span><span class="nf-val"><a href="mailto:ky2288@nyu.edu">ky2288@nyu.edu</a></span>
-            <span class="nf-key">Web</span><span class="nf-val"><a href="https://kyusikyang.com">kyusikyang.com</a></span>
-          </div>
-          <div class="color-blocks">
-            <div class="color-block" style="background:#57068c"></div>
-            <div class="color-block" style="background:#a855f7"></div>
-            <div class="color-block" style="background:#22d3ee"></div>
-            <div class="color-block" style="background:#4ade80"></div>
-            <div class="color-block" style="background:#fb923c"></div>
-            <div class="color-block" style="background:#fbbf24"></div>
-            <div class="color-block" style="background:#f87171"></div>
-            <div class="color-block" style="background:#f472b6"></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
