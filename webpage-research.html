@@ -64,6 +64,7 @@ body.classic-mode .cli-view{display:none}
 .badge.diss{background:rgba(168,85,247,.1);color:var(--nyu-soft);border:1px solid rgba(168,85,247,.2)}
 .badge.korean{background:rgba(244,114,182,.1);color:var(--pink);border:1px solid rgba(244,114,182,.2)}
 .badge.forth{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.2)}
+.badge.work{background:rgba(148,163,184,.1);color:#94a3b8;border:1px solid rgba(148,163,184,.2)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
 .paper-authors{color:var(--dim);font-size:11px}
 .paper-journal{color:var(--cyan);font-size:11px;font-style:italic}
@@ -98,6 +99,7 @@ body.classic-mode .cli-view{display:none}
 .c-badge.forth{background:#e0f7fa;color:#00838f;border:1px solid #b2ebf2}
 .c-badge.korean{background:#fce4ec;color:#c2185b;border:1px solid #f8bbd0}
 .c-badge.diss{background:#f3e5f5;color:#7b1fa2;border:1px solid #e1bee7}
+.c-badge.work{background:#f1f5f9;color:#64748b;border:1px solid #cbd5e1}
 .classic-diss-frame{border:1px solid #e0ddd8;border-radius:8px;padding:20px 24px;background:#fdfcfa;margin-bottom:10px}
 .classic-diss-frame .diss-title{font-family:'Crimson Pro',serif;font-size:16px;font-weight:600;color:#333;margin-bottom:4px}
 .classic-diss-frame .diss-committee{font-size:13px;color:#999}
@@ -153,15 +155,13 @@ body.classic-mode .cli-view{display:none}
       </p>
       <div class="classic-diss-frame">
         <div class="diss-title">Essay 1: Local Participation in Federal Enforcement: Evidence from the 287(g) Program <span class="c-badge jmp">JMP</span></div>
-        <div class="diss-committee">Methods: Cox Hazard Models, Callaway-Sant&#8217;Anna DiD &#183; Data: Deportation Data Project + ICE</div>
       </div>
       <div class="classic-diss-frame">
-        <div class="diss-title">Essay 2: Bureaucratizing Justice: Executive Control in Immigration Courts</div>
-        <div class="diss-committee">with Nathan Lee &#183; Methods: DiD on Judge Cohorts, LLM-Coded Biographies &#183; Data: 12M+ EOIR Cases</div>
+        <div class="diss-title">Essay 2: Bureaucratizing Justice: Executive Control in Immigration Courts <span class="c-badge work">Working Project</span></div>
+        <div class="diss-committee">with Nathan Lee</div>
       </div>
       <div class="classic-diss-frame">
-        <div class="diss-title">Essay 3: Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys</div>
-        <div class="diss-committee">Methods: 2&#215;2 DiD &#183; Data: PACER (~28,800 Cases) + L2 Voter File</div>
+        <div class="diss-title">Essay 3: Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys <span class="c-badge work">Working Project</span></div>
       </div>
     </div>
     <div class="classic-section">
@@ -218,9 +218,9 @@ body.classic-mode .cli-view{display:none}
 </div>
 <script>
 var papers=[
-{title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["jmp","diss"],meta:"Cox Hazard \u00b7 Callaway-Sant'Anna DiD \u00b7 Deportation Data Project + ICE",category:["dissertation"],isJmp:true},
-{title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss"],coauthor:"with Nathan Lee",meta:"DiD on Judge Cohorts \u00b7 LLM-Coded Bios \u00b7 12M+ EOIR Cases",category:["dissertation"]},
-{title:"Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys",badges:["diss"],meta:"2\u00d72 DiD \u00b7 PACER (~28,800 Cases) + L2 Voter File",category:["dissertation"]},
+{title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["jmp","diss"],category:["dissertation"],isJmp:true},
+{title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss","work"],coauthor:"with Nathan Lee",category:["dissertation"]},
+{title:"Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys",badges:["diss","work"],category:["dissertation"]},
 {title:"South Korea in 2025: Democratic Comeback and the Challenges of Institutional Resilience",badges:["forth"],authors:"Jin, Youngjae and Kyusik Yang",journal:"Asian Survey, forthcoming (2026)",category:["published"]},
 {title:"Resilient Democracy or Fragile Democracy? The Declaration of Martial Law and Presidential Impeachment in South Korea",badges:["pub"],authors:"Jin, Youngjae and Kyusik Yang",journal:"Asian Survey 65(6): 729\u2013750 (2025)",category:["published"]},
 {title:"Measuring Legislators' Ideology and Analyzing Ideological Differences Across Standing Committees Using Wordfish",badges:["pub","korean"],authors:"Cho, Eunmi, Sinjae Kang, Kyusik Yang, Yongjai Yu, and Yoonseok Lee",journal:"Journal of Research Methodology 9(3): 33\u201379 (2024)",category:["published"]},
@@ -235,7 +235,7 @@ var papers=[
 {title:"Unbalanced Battlegrounds: Interest Groups' Venue Choice Revisited",badges:[],category:["working"]}
 ];
 var sectionCmds={all:'ls -la research/ --sort=date',dissertation:'cat dissertation/*.md',published:'ls publications/ --sort=date',working:'git log --oneline working-papers/'};
-var badgeLabels={jmp:'JMP',pub:'Published',review:'Under Review',diss:'Dissertation',korean:'\ud55c\uad6d\uc5b4',forth:'Forthcoming'};
+var badgeLabels={jmp:'JMP',pub:'Published',review:'Under Review',diss:'Dissertation',korean:'\ud55c\uad6d\uc5b4',forth:'Forthcoming',work:'Working'};
 function renderPapers(f){var c=document.getElementById('papers-container');var fl=f==='all'?papers:papers.filter(function(p){return p.category.indexOf(f)!==-1});var h='';var d=0;fl.forEach(function(p){var j=p.isJmp?' jmp':'';var b=p.badges.map(function(x){return'<span class="badge '+x+'">'+badgeLabels[x]+'</span>'}).join(' ');var m='';if(p.authors)m+='<span class="paper-authors">'+p.authors+'</span>';if(p.coauthor)m+='<span class="paper-coauthor">'+p.coauthor+'</span>';if(p.journal)m+='<span class="paper-journal">'+p.journal+'</span>';if(p.meta)m+='<span style="color:var(--dim);font-size:11px">'+p.meta+'</span>';h+='<div class="paper-card'+j+'" style="animation-delay:'+d+'ms"><div class="paper-title">'+p.title+'</div><div class="paper-meta">'+b+m+'</div></div>';d+=60});c.innerHTML=h}
 function filterPapers(f,btn){document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.getElementById('cli-section-cmd').innerHTML='<span class="prompt-symbol">&#10095; </span><span class="cmd-exec">'+sectionCmds[f]+'</span>';renderPapers(f)}
 function setMode(m){if(m==='classic')document.body.classList.add('classic-mode');else document.body.classList.remove('classic-mode');updateLabels()}
