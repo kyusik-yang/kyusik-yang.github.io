@@ -130,10 +130,10 @@ body.classic-mode .cli-view{display:none}
           <span>60%</span>
         </div>
         <div class="nav-tabs">
-          <button class="nav-tab active" onclick="filterPapers('all',this)">All <span class="count">(14)</span></button>
+          <button class="nav-tab active" onclick="filterPapers('all',this)">All <span class="count">(15)</span></button>
           <button class="nav-tab" onclick="filterPapers('dissertation',this)">Dissertation <span class="count">(3)</span></button>
           <button class="nav-tab" onclick="filterPapers('published',this)">Published <span class="count">(4)</span></button>
-          <button class="nav-tab" onclick="filterPapers('working',this)">Working <span class="count">(10)</span></button>
+          <button class="nav-tab" onclick="filterPapers('working',this)">Working <span class="count">(8)</span></button>
         </div>
         <div class="section-cmd" id="cli-section-cmd"><span class="prompt-symbol">&#10095; </span><span class="cmd-exec">ls -la research/ --sort=date</span></div>
         <div id="papers-container"></div>
@@ -200,6 +200,10 @@ body.classic-mode .cli-view{display:none}
         <div class="c-meta">with Sunghyun Kim and Jaehak Kim</div>
       </div>
       <div class="classic-item">
+        <div class="c-title">Who Owns North Korea Policy? Bureaucratic Competition and Issue Ownership in South Korea</div>
+        <div class="c-meta">with Jaeyoung Hur</div>
+      </div>
+      <div class="classic-item">
         <div class="c-title">Assessing Public Perceptions of Petition Quality</div>
         <div class="c-meta">with Seo-young Silvia Kim and Byungkoo Kim</div>
       </div>
@@ -214,9 +218,9 @@ body.classic-mode .cli-view{display:none}
 </div>
 <script>
 var papers=[
-{title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["jmp","diss"],meta:"Cox Hazard \u00b7 Callaway-Sant'Anna DiD \u00b7 Deportation Data Project + ICE",category:["dissertation","working"],isJmp:true},
-{title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss"],coauthor:"with Nathan Lee",meta:"DiD on Judge Cohorts \u00b7 LLM-Coded Bios \u00b7 12M+ EOIR Cases",category:["dissertation","working"]},
-{title:"Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys",badges:["diss"],meta:"2\u00d72 DiD \u00b7 PACER (~28,800 Cases) + L2 Voter File",category:["dissertation","working"]},
+{title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["jmp","diss"],meta:"Cox Hazard \u00b7 Callaway-Sant'Anna DiD \u00b7 Deportation Data Project + ICE",category:["dissertation"],isJmp:true},
+{title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss"],coauthor:"with Nathan Lee",meta:"DiD on Judge Cohorts \u00b7 LLM-Coded Bios \u00b7 12M+ EOIR Cases",category:["dissertation"]},
+{title:"Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys",badges:["diss"],meta:"2\u00d72 DiD \u00b7 PACER (~28,800 Cases) + L2 Voter File",category:["dissertation"]},
 {title:"South Korea in 2025: Democratic Comeback and the Challenges of Institutional Resilience",badges:["forth"],authors:"Jin, Youngjae and Kyusik Yang",journal:"Asian Survey, forthcoming (2026)",category:["published"]},
 {title:"Resilient Democracy or Fragile Democracy? The Declaration of Martial Law and Presidential Impeachment in South Korea",badges:["pub"],authors:"Jin, Youngjae and Kyusik Yang",journal:"Asian Survey 65(6): 729\u2013750 (2025)",category:["published"]},
 {title:"Measuring Legislators' Ideology and Analyzing Ideological Differences Across Standing Committees Using Wordfish",badges:["pub","korean"],authors:"Cho, Eunmi, Sinjae Kang, Kyusik Yang, Yongjai Yu, and Yoonseok Lee",journal:"Journal of Research Methodology 9(3): 33\u201379 (2024)",category:["published"]},
@@ -225,6 +229,7 @@ var papers=[
 {title:"Korean Politics, in Short: A Multimodal Analysis of YouTube Shorts by Members of the National Assembly",badges:[],coauthor:"with Yongjai Yu",category:["working"]},
 {title:"Populist Strategies in Korean Election Manifestos: An LLM-Based Quantitative Analysis",badges:[],category:["working"]},
 {title:"Expertise on Demand: Executive Power and the Politics of Policy Knowledge in South Korea",badges:[],coauthor:"with Sunghyun Kim and Jaehak Kim",category:["working"]},
+{title:"Who Owns North Korea Policy? Bureaucratic Competition and Issue Ownership in South Korea",badges:[],coauthor:"with Jaeyoung Hur",category:["working"]},
 {title:"Assessing Public Perceptions of Petition Quality",badges:[],coauthor:"with Seo-young Silvia Kim and Byungkoo Kim",category:["working"]},
 {title:"Polarization in Local Politics: Text-as-Data Analysis of Municipal Meetings",badges:[],category:["working"]},
 {title:"Unbalanced Battlegrounds: Interest Groups' Venue Choice Revisited",badges:[],category:["working"]}
