@@ -242,6 +242,13 @@ function setMode(m){if(m==='classic')document.body.classList.add('classic-mode')
 function toggleMode(){document.body.classList.toggle('classic-mode');updateLabels()}
 function updateLabels(){var ic=document.body.classList.contains('classic-mode');document.getElementById('lbl-cli').classList.toggle('active',!ic);document.getElementById('lbl-classic').classList.toggle('active',ic)}
 renderPapers('all');
+
+function sendHeight() {
+  window.parent.postMessage({type:'iframeResize', height: document.body.scrollHeight}, '*');
+}
+window.addEventListener('load', sendHeight);
+window.addEventListener('resize', sendHeight);
+new MutationObserver(sendHeight).observe(document.body, {subtree:true, childList:true, attributes:true});
 </script>
 </body>
 </html>
