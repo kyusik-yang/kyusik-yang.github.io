@@ -62,6 +62,8 @@ body.classic-mode .cli-view{display:none}
 .card-links{display:flex;gap:6px;margin-top:8px}
 .card-links a{font-size:10px;color:var(--nyu-soft);text-decoration:none;padding:2px 8px;border:1px solid rgba(168,85,247,.25);border-radius:3px;transition:all .2s;letter-spacing:.3px}
 .card-links a:hover{background:rgba(168,85,247,.12);color:var(--nyu-bright)}
+.card-meta a{color:var(--cyan);text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
 .badge{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9.5px;letter-spacing:.3px;font-weight:600;text-transform:uppercase}
 .badge.pkg{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.2)}
 .badge.ta{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
@@ -106,6 +108,8 @@ body.classic-mode .cli-view{display:none}
 .classic-item .c-title{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:4px;line-height:1.55}
 .classic-item .c-meta{font-size:13.5px;color:#777;line-height:1.5}
 .classic-item .c-meta em{font-style:italic;color:#555}
+.classic-item .c-meta a{color:var(--nyu);text-decoration:none;font-weight:500}
+.classic-item .c-meta a:hover{text-decoration:underline}
 .c-badge{display:inline-block;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:3px;margin-left:6px;vertical-align:middle}
 .c-badge.new{background:#fff3e0;color:#e67e22;border:1px solid #f5d5a0}
 .c-badge.pkg{background:#e0f7fa;color:#00838f;border:1px solid #b2ebf2}
@@ -228,34 +232,34 @@ body.classic-mode .cli-view{display:none}
       </div>
       <div class="classic-item">
         <div class="c-title">Power and Politics in America</div>
-        <div class="c-meta">Teaching Assistant / Section Leader for Prof. Sanford C. Gordon [Fall 2023] [Fall 2025]</div>
+        <div class="c-meta">Teaching Assistant / Section Leader for Prof. Sanford C. Gordon <a href="https://kyusikyang.com/s/Fall-2023-Power-Politics-in-America-Kyu-Sik-Yang.pdf" target="_blank">[Fall 2023]</a> <a href="https://kyusikyang.com/s/Fall-2025-Power-Politics-in-America-Kyu-Sik-Yang.pdf" target="_blank">[Fall 2025]</a></div>
       </div>
       <div class="classic-item">
         <div class="c-title">Power and Politics in America</div>
-        <div class="c-meta">Teaching Assistant / Section Leader for Prof. Jonathan Nagler [Spring 2024]</div>
+        <div class="c-meta">Teaching Assistant / Section Leader for Prof. Jonathan Nagler <a href="https://kyusikyang.com/s/Spring-2024-Power-Politics-in-America-Kyu-Sik-Yang.pdf" target="_blank">[Spring 2024]</a></div>
       </div>
     </div>
 
     <div class="classic-section">
       <h2>Yonsei University</h2>
       <div class="classic-item">
-        <div class="c-title">Introduction to Political Science <span class="c-badge korean">&#54620;&#44397;&#50612;</span></div>
+        <div class="c-title">Introduction to Political Science <span class="c-badge korean">Korean</span></div>
         <div class="c-meta">Teaching Assistant for Prof. Youngjae Jin [Spring 2015] [Spring 2016] [Fall 2016] [Spring 2017]</div>
       </div>
       <div class="classic-item">
-        <div class="c-title">Comparative Politics <span class="c-badge korean">&#54620;&#44397;&#50612;</span></div>
+        <div class="c-title">Comparative Politics <span class="c-badge korean">Korean</span></div>
         <div class="c-meta">Teaching Assistant for Prof. Youngjae Jin [Spring 2015] [Spring 2017]</div>
       </div>
       <div class="classic-item">
-        <div class="c-title">Social Science Research Methods <span class="c-badge korean">&#54620;&#44397;&#50612;</span></div>
+        <div class="c-title">Social Science Research Methods <span class="c-badge korean">Korean</span></div>
         <div class="c-meta">Teaching Assistant for Prof. Youngjae Jin [Spring 2016]</div>
       </div>
       <div class="classic-item">
-        <div class="c-title">Korean Politics <span class="c-badge korean">&#54620;&#44397;&#50612;</span></div>
+        <div class="c-title">Korean Politics <span class="c-badge korean">Korean</span></div>
         <div class="c-meta">Teaching Assistant for Prof. Youngjae Jin [Fall 2015]</div>
       </div>
       <div class="classic-item">
-        <div class="c-title">Party Politics <span class="c-badge korean">&#54620;&#44397;&#50612;</span></div>
+        <div class="c-title">Party Politics <span class="c-badge korean">Korean</span></div>
         <div class="c-meta">Teaching Assistant for Prof. Youngjae Jin [Fall 2014]</div>
       </div>
     </div>
@@ -280,7 +284,7 @@ var items=[
 {title:"Introduction to Research Methods in Political Science",type:"nyu",category:["nyu"],badges:["ta"],
  meta:"TA / Section Leader for Prof. Cassandra Handan-Nader [Spring 2026]"},
 {title:"Power and Politics in America",type:"nyu",category:["nyu"],badges:["ta"],
- meta:"TA / Section Leader for Prof. Sanford C. Gordon [Fall 2023] [Fall 2025], Prof. Jonathan Nagler [Spring 2024]"},
+ meta:'TA / Section Leader for Prof. Sanford C. Gordon <a href="https://kyusikyang.com/s/Fall-2023-Power-Politics-in-America-Kyu-Sik-Yang.pdf" target="_blank">[Fall 2023]</a> <a href="https://kyusikyang.com/s/Fall-2025-Power-Politics-in-America-Kyu-Sik-Yang.pdf" target="_blank">[Fall 2025]</a>, Prof. Jonathan Nagler <a href="https://kyusikyang.com/s/Spring-2024-Power-Politics-in-America-Kyu-Sik-Yang.pdf" target="_blank">[Spring 2024]</a>'},
 {title:"Introduction to Political Science",type:"yonsei",category:["yonsei"],badges:["ta","korean"],
  meta:"TA for Prof. Youngjae Jin [Spring 2015] [Spring 2016] [Fall 2016] [Spring 2017]"},
 {title:"Comparative Politics",type:"yonsei",category:["yonsei"],badges:["ta","korean"],
@@ -293,7 +297,7 @@ var items=[
  meta:"TA for Prof. Youngjae Jin [Fall 2014]"}
 ];
 var sectionCmds={all:'ls -la teaching/ --sort=date',resources:'cat resources/README.md',nyu:'ls nyu/ --sort=date',yonsei:'ls yonsei/ --sort=date'};
-var badgeLabels={new:'New',pkg:'R Package',ta:'TA',korean:'\ud55c\uad6d\uc5b4'};
+var badgeLabels={new:'New',pkg:'R Package',ta:'TA',korean:'Korean'};
 
 function renderCards(f){
   var c=document.getElementById('cards-container');
