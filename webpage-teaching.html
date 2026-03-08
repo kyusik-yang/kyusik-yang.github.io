@@ -161,27 +161,6 @@ body.classic-mode .cli-view{display:none}
         <div class="section-cmd" id="cli-section-cmd"><span class="prompt-symbol">&#10095; </span><span class="cmd-exec">ls -la teaching/ --sort=date</span></div>
         <div id="cards-container"></div>
 
-        <div class="neofetch" id="cli-neofetch">
-          <div class="neofetch-cmd"><span class="prompt-symbol">&#10095; </span><span class="cmd-exec">neofetch --teaching</span></div>
-          <div class="neofetch-grid">
-            <span class="nf-key">Instructor</span><span class="nf-val">Kyusik Yang</span>
-            <span class="nf-key">Affiliation</span><span class="nf-val">NYU Department of Politics</span>
-            <span class="nf-key">Focus</span><span class="nf-val">Quantitative Methods, Korean Politics, Executive Politics</span>
-            <span class="nf-key">Tools</span><span class="nf-val">R, Python, tidyverse, ggplot2, learnr</span>
-            <span class="nf-key">Package</span><span class="nf-val"><a href="https://github.com/kyusik-yang/assemblykor" target="_blank">assemblykor</a> (R, v0.1.0)</span>
-            <span class="nf-key">GitHub</span><span class="nf-val"><a href="https://github.com/kyusik-yang" target="_blank">github.com/kyusik-yang</a></span>
-          </div>
-          <div class="color-blocks">
-            <div class="color-block" style="background:var(--red)"></div>
-            <div class="color-block" style="background:var(--orange)"></div>
-            <div class="color-block" style="background:var(--yellow)"></div>
-            <div class="color-block" style="background:var(--green)"></div>
-            <div class="color-block" style="background:var(--cyan)"></div>
-            <div class="color-block" style="background:var(--blue)"></div>
-            <div class="color-block" style="background:var(--nyu-bright)"></div>
-            <div class="color-block" style="background:var(--pink)"></div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -225,7 +204,7 @@ body.classic-mode .cli-view{display:none}
     </div>
 
     <div class="classic-section">
-      <h2>New York University</h2>
+      <h2 style="color:#57068c">New York University</h2>
       <div class="classic-item">
         <div class="c-title">Introduction to Research Methods in Political Science</div>
         <div class="c-meta">Teaching Assistant / Section Leader for Prof. Cassandra Handan-Nader [Spring 2026]</div>
@@ -241,7 +220,7 @@ body.classic-mode .cli-view{display:none}
     </div>
 
     <div class="classic-section">
-      <h2>Yonsei University</h2>
+      <h2 style="color:#003876">Yonsei University</h2>
       <div class="classic-item">
         <div class="c-title">Introduction to Political Science <span class="c-badge korean">Korean</span></div>
         <div class="c-meta">Teaching Assistant for Prof. Youngjae Jin [Spring 2015] [Spring 2016] [Fall 2016] [Spring 2017]</div>
@@ -334,7 +313,6 @@ function renderCards(f){
     d+=60;
   });
   c.innerHTML=h;
-  document.getElementById('cli-neofetch').style.display=(f==='all'||f==='resources')?'block':'none';
 }
 
 function filterCards(f,btn){
