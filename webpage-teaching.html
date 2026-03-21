@@ -69,6 +69,8 @@ body.classic-mode .cli-view{display:none}
 .badge.ta{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
 .badge.korean{background:rgba(244,114,182,.1);color:var(--pink);border:1px solid rgba(244,114,182,.2)}
 .badge.new{background:rgba(251,146,60,.15);color:var(--orange);border:1px solid rgba(251,146,60,.25);animation:pulse 2s infinite}
+.badge.tut{background:rgba(96,165,250,.1);color:var(--blue);border:1px solid rgba(96,165,250,.2)}
+.badge.wip{background:rgba(251,191,36,.1);color:var(--yellow);border:1px solid rgba(251,191,36,.2);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
 
 .install-block{background:rgba(14,14,20,.8);border:1px solid var(--border);border-radius:6px;padding:10px 14px;margin-top:10px;font-size:11.5px;color:var(--green);letter-spacing:.3px;position:relative;cursor:pointer;transition:border-color .2s}
@@ -114,6 +116,8 @@ body.classic-mode .cli-view{display:none}
 .c-badge.new{background:#fff3e0;color:#e67e22;border:1px solid #f5d5a0}
 .c-badge.pkg{background:#e0f7fa;color:#00838f;border:1px solid #b2ebf2}
 .c-badge.korean{background:#fce4ec;color:#c2185b;border:1px solid #f8bbd0}
+.c-badge.tut{background:#e3f2fd;color:#1565c0;border:1px solid #90caf9}
+.c-badge.wip{background:#fff8e1;color:#f57f17;border:1px solid #ffe082;animation:pulse 2s infinite}
 .classic-pkg-frame{border:1px solid #e0ddd8;border-radius:8px;padding:20px 24px;background:#fdfcfa;margin-bottom:16px}
 .classic-pkg-frame .pkg-title{font-family:'Crimson Pro',serif;font-size:18px;font-weight:600;color:#333;margin-bottom:6px}
 .classic-pkg-frame .pkg-desc{font-size:14px;color:#555;line-height:1.65;margin-bottom:12px}
@@ -154,7 +158,7 @@ body.classic-mode .cli-view{display:none}
         <div class="hero-sub">NYU &amp; Yonsei &#183; Methods &amp; Substantive Courses <span class="tag">teaching portfolio</span></div>
         <div class="nav-tabs">
           <button class="nav-tab active" onclick="filterCards('all',this)">All <span class="count">(3)</span></button>
-          <button class="nav-tab" onclick="filterCards('resources',this)">Resources <span class="count">(1)</span></button>
+          <button class="nav-tab" onclick="filterCards('resources',this)">Resources <span class="count">(2)</span></button>
           <button class="nav-tab" onclick="filterCards('nyu',this)">NYU <span class="count">(2)</span></button>
           <button class="nav-tab" onclick="filterCards('yonsei',this)">Yonsei <span class="count">(5)</span></button>
         </div>
@@ -199,6 +203,31 @@ body.classic-mode .cli-view{display:none}
         <div class="pkg-install">remotes::install_github("kyusik-yang/assemblykor")</div>
         <div class="pkg-links">
           <a href="https://github.com/kyusik-yang/assemblykor" target="_blank">GitHub &#8599;</a>
+        </div>
+      </div>
+
+      <div class="classic-pkg-frame">
+        <div class="pkg-title">Multimodal Embedding for Political Science <span class="c-badge tut">Tutorial</span> <span class="c-badge wip">Learning by Doing</span></div>
+        <div class="pkg-desc">
+          An open research notebook and methods tutorial for embedding Korean politicians' YouTube Shorts (text + audio + video) into a shared vector space using Google's Gemini Embedding 2. Documents the full pipeline from API setup to panel regression, written for political scientists without ML background. With Yongjai Yu (UC Riverside).
+        </div>
+        <div class="pkg-stats">
+          <span><strong>4</strong> chapters</span>
+          <span><strong>5-phase</strong> self-study curriculum</span>
+          <span><strong>30+</strong> curated readings</span>
+        </div>
+        <table class="classic-tut-table">
+          <thead><tr><th>#</th><th>Chapter</th><th>Topics</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Setup</td><td>Google AI Studio API, SDK, connection test</td></tr>
+            <tr><td>2</td><td>Embedding</td><td>audio, video, multimodal strategies</td></tr>
+            <tr><td>3</td><td>Analysis</td><td>cosine similarity, UMAP, HDBSCAN</td></tr>
+            <tr><td>4</td><td>Panel Design</td><td>aggregation, FE regression, event study</td></tr>
+          </tbody>
+        </table>
+        <div class="pkg-links">
+          <a href="https://kyusik-yang.github.io/multimodal-embedding/" target="_blank">Live Site &#8599;</a>
+          <a href="https://github.com/kyusik-yang/multimodal-embedding" target="_blank">GitHub &#8599;</a>
         </div>
       </div>
     </div>
@@ -260,6 +289,17 @@ var items=[
    {num:"5",title:"Text Analysis",topic:"TF-IDF, keywords"},
    {num:"6",title:"Network Analysis",topic:"centrality, community"}
  ]},
+{title:"Multimodal Embedding for Political Science",type:"resources",category:["resources"],featured:true,
+ desc:"Open research notebook & methods tutorial for embedding Korean politicians' YouTube Shorts into a shared vector space using Gemini Embedding 2. From API setup to panel regression, for political scientists without ML background. With Yongjai Yu (UC Riverside).",
+ badges:["tut","wip"],
+ stats:[{n:"4",label:"chapters"},{n:"5-phase",label:"self-study curriculum"},{n:"30+",label:"readings"}],
+ links:[{label:"Live Site",url:"https://kyusik-yang.github.io/multimodal-embedding/"},{label:"GitHub",url:"https://github.com/kyusik-yang/multimodal-embedding"}],
+ tutorials:[
+   {num:"1",title:"Setup",topic:"API config, SDK, connection test"},
+   {num:"2",title:"Embedding",topic:"audio, video, multimodal strategies"},
+   {num:"3",title:"Analysis",topic:"cosine similarity, UMAP, HDBSCAN"},
+   {num:"4",title:"Panel Design",topic:"aggregation, FE, event study"}
+ ]},
 {title:"Introduction to Research Methods in Political Science",type:"nyu",category:["nyu"],badges:["ta"],
  meta:"TA / Section Leader for Prof. Cassandra Handan-Nader [Spring 2026]"},
 {title:"Power and Politics in America",type:"nyu",category:["nyu"],badges:["ta"],
@@ -276,7 +316,7 @@ var items=[
  meta:"TA for Prof. Youngjae Jin [Fall 2014]"}
 ];
 var sectionCmds={all:'ls -la teaching/ --sort=date',resources:'cat resources/README.md',nyu:'ls nyu/ --sort=date',yonsei:'ls yonsei/ --sort=date'};
-var badgeLabels={new:'New',pkg:'R Package',ta:'TA',korean:'Korean'};
+var badgeLabels={new:'New',pkg:'R Package',ta:'TA',korean:'Korean',tut:'Tutorial',wip:'Learning by Doing'};
 
 function renderCards(f){
   var c=document.getElementById('cards-container');
