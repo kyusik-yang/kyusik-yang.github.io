@@ -54,11 +54,9 @@ body.classic-mode .cli-view{display:none}
 .paper-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;transition:background .3s}
 .paper-card:hover{border-color:var(--border-h);background:rgba(20,20,30,.8);transform:translateX(3px)}
 .paper-card:hover::before{background:var(--nyu)}
-.paper-card.jmp::before{background:var(--orange)}.paper-card.jmp{border-color:rgba(251,146,60,.15)}
 .paper-title{font-size:12.5px;font-weight:500;color:var(--text);margin-bottom:5px;line-height:1.5}
 .paper-meta{font-size:11px;color:var(--dim);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .badge{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9.5px;letter-spacing:.3px;font-weight:600;text-transform:uppercase}
-.badge.jmp{background:rgba(251,146,60,.15);color:var(--orange);border:1px solid rgba(251,146,60,.25);animation:pulse 2s infinite}
 .badge.pub{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
 .badge.review,.badge.rr{background:rgba(96,165,250,.1);color:var(--blue);border:1px solid rgba(96,165,250,.2)}
 .badge.diss{background:rgba(168,85,247,.1);color:var(--nyu-soft);border:1px solid rgba(168,85,247,.2)}
@@ -94,7 +92,6 @@ body.classic-mode .cli-view{display:none}
 .classic-item .c-meta{font-size:13.5px;color:#777;line-height:1.5}
 .classic-item .c-meta em{font-style:italic;color:#555}
 .c-badge{display:inline-block;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:3px;margin-left:6px;vertical-align:middle}
-.c-badge.jmp{background:#fff3e0;color:#e67e22;border:1px solid #f5d5a0}
 .c-badge.review,.c-badge.rr{background:#e8f4fd;color:#2980b9;border:1px solid #b8d9f0}
 .c-badge.forth{background:#e0f7fa;color:#00838f;border:1px solid #b2ebf2}
 .c-badge.korean{background:#fce4ec;color:#c2185b;border:1px solid #f8bbd0}
@@ -154,7 +151,7 @@ body.classic-mode .cli-view{display:none}
         <span style="font-size:13px;color:#999">Committee: Sanford Gordon (chair), Hye Young You, Bryant Moy &#183; Expected Defense: April 2027</span>
       </p>
       <div class="classic-diss-frame">
-        <div class="diss-title">Essay 1: Local Participation in Federal Enforcement: Evidence from the 287(g) Program <span class="c-badge jmp">JMP</span></div>
+        <div class="diss-title">Essay 1: Local Participation in Federal Enforcement: Evidence from the 287(g) Program <span class="c-badge work">Working Project</span></div>
       </div>
       <div class="classic-diss-frame">
         <div class="diss-title">Essay 2: Bureaucratizing Justice: Executive Control in Immigration Courts <span class="c-badge review">Under Review</span></div>
@@ -220,7 +217,7 @@ body.classic-mode .cli-view{display:none}
 </div>
 <script>
 var papers=[
-{title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["jmp","diss"],category:["dissertation"],isJmp:true},
+{title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["diss","work"],category:["dissertation"]},
 {title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss","review"],coauthor:"with Nathan Lee",category:["dissertation"]},
 {title:"Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys",badges:["diss","work"],category:["dissertation"]},
 {title:"Speech and Voice in Politics: Multimodal Analysis of Presidential Addresses to the Korean National Assembly",badges:["forth"],authors:"Yang, Kyusik",journal:"Korea Observer, forthcoming (2026)",category:["published"]},
@@ -237,8 +234,8 @@ var papers=[
 {title:"Unbalanced Battlegrounds: Interest Groups' Venue Choice Revisited",badges:[],category:["working"]}
 ];
 var sectionCmds={all:'ls -la research/ --sort=date',dissertation:'cat dissertation/*.md',published:'ls publications/ --sort=date',working:'git log --oneline working-papers/'};
-var badgeLabels={jmp:'JMP',pub:'Published',review:'Under Review',rr:'R&R',diss:'Dissertation',korean:'\ud55c\uad6d\uc5b4',forth:'Forthcoming',work:'Working'};
-function renderPapers(f){var c=document.getElementById('papers-container');var fl=f==='all'?papers:papers.filter(function(p){return p.category.indexOf(f)!==-1});var h='';var d=0;fl.forEach(function(p){var j=p.isJmp?' jmp':'';var b=p.badges.map(function(x){return'<span class="badge '+x+'">'+badgeLabels[x]+'</span>'}).join(' ');var m='';if(p.authors)m+='<span class="paper-authors">'+p.authors+'</span>';if(p.coauthor)m+='<span class="paper-coauthor">'+p.coauthor+'</span>';if(p.journal)m+='<span class="paper-journal">'+p.journal+'</span>';if(p.meta)m+='<span style="color:var(--dim);font-size:11px">'+p.meta+'</span>';h+='<div class="paper-card'+j+'" style="animation-delay:'+d+'ms"><div class="paper-title">'+p.title+'</div><div class="paper-meta">'+b+m+'</div></div>';d+=60});c.innerHTML=h}
+var badgeLabels={pub:'Published',review:'Under Review',rr:'R&R',diss:'Dissertation',korean:'\ud55c\uad6d\uc5b4',forth:'Forthcoming',work:'Working'};
+function renderPapers(f){var c=document.getElementById('papers-container');var fl=f==='all'?papers:papers.filter(function(p){return p.category.indexOf(f)!==-1});var h='';var d=0;fl.forEach(function(p){var b=p.badges.map(function(x){return'<span class="badge '+x+'">'+badgeLabels[x]+'</span>'}).join(' ');var m='';if(p.authors)m+='<span class="paper-authors">'+p.authors+'</span>';if(p.coauthor)m+='<span class="paper-coauthor">'+p.coauthor+'</span>';if(p.journal)m+='<span class="paper-journal">'+p.journal+'</span>';if(p.meta)m+='<span style="color:var(--dim);font-size:11px">'+p.meta+'</span>';h+='<div class="paper-card" style="animation-delay:'+d+'ms"><div class="paper-title">'+p.title+'</div><div class="paper-meta">'+b+m+'</div></div>';d+=60});c.innerHTML=h}
 function filterPapers(f,btn){document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.getElementById('cli-section-cmd').innerHTML='<span class="prompt-symbol">&#10095; </span><span class="cmd-exec">'+sectionCmds[f]+'</span>';renderPapers(f)}
 function setMode(m){if(m==='classic')document.body.classList.add('classic-mode');else document.body.classList.remove('classic-mode');updateLabels()}
 function toggleMode(){document.body.classList.toggle('classic-mode');updateLabels()}
