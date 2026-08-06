@@ -60,7 +60,7 @@ body.classic-mode .cli-view{display:none}
 .badge{display:inline-block;padding:1px 7px;border-radius:3px;font-size:9.5px;letter-spacing:.3px;font-weight:600;text-transform:uppercase}
 .badge.jmp{background:rgba(251,146,60,.15);color:var(--orange);border:1px solid rgba(251,146,60,.25);animation:pulse 2s infinite}
 .badge.pub{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
-.badge.review{background:rgba(96,165,250,.1);color:var(--blue);border:1px solid rgba(96,165,250,.2)}
+.badge.review,.badge.rr{background:rgba(96,165,250,.1);color:var(--blue);border:1px solid rgba(96,165,250,.2)}
 .badge.diss{background:rgba(168,85,247,.1);color:var(--nyu-soft);border:1px solid rgba(168,85,247,.2)}
 .badge.korean{background:rgba(244,114,182,.1);color:var(--pink);border:1px solid rgba(244,114,182,.2)}
 .badge.forth{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.2)}
@@ -95,7 +95,7 @@ body.classic-mode .cli-view{display:none}
 .classic-item .c-meta em{font-style:italic;color:#555}
 .c-badge{display:inline-block;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:3px;margin-left:6px;vertical-align:middle}
 .c-badge.jmp{background:#fff3e0;color:#e67e22;border:1px solid #f5d5a0}
-.c-badge.review{background:#e8f4fd;color:#2980b9;border:1px solid #b8d9f0}
+.c-badge.review,.c-badge.rr{background:#e8f4fd;color:#2980b9;border:1px solid #b8d9f0}
 .c-badge.forth{background:#e0f7fa;color:#00838f;border:1px solid #b2ebf2}
 .c-badge.korean{background:#fce4ec;color:#c2185b;border:1px solid #f8bbd0}
 .c-badge.diss{background:#f3e5f5;color:#7b1fa2;border:1px solid #e1bee7}
@@ -157,7 +157,7 @@ body.classic-mode .cli-view{display:none}
         <div class="diss-title">Essay 1: Local Participation in Federal Enforcement: Evidence from the 287(g) Program <span class="c-badge jmp">JMP</span></div>
       </div>
       <div class="classic-diss-frame">
-        <div class="diss-title">Essay 2: Bureaucratizing Justice: Executive Control in Immigration Courts <span class="c-badge work">Working Project</span></div>
+        <div class="diss-title">Essay 2: Bureaucratizing Justice: Executive Control in Immigration Courts <span class="c-badge review">Under Review</span></div>
         <div class="diss-committee">with Nathan Lee</div>
       </div>
       <div class="classic-diss-frame">
@@ -190,8 +190,8 @@ body.classic-mode .cli-view{display:none}
     <div class="classic-section">
       <h2>Working Projects</h2>
       <div class="classic-item">
-        <div class="c-title">Style Over Substance: How Citizens Evaluate the Quality of Public Petitions <span class="c-badge review">Under Review</span></div>
-        <div class="c-meta">with Seo-young Silvia Kim and Byungkoo Kim</div>
+        <div class="c-title">Style Over Substance: How Citizens Evaluate the Quality of Public Petitions <span class="c-badge rr">R&amp;R</span></div>
+        <div class="c-meta">with Seo-young Silvia Kim and Byungkoo Kim &#183; R&amp;R at <em>Policy Studies Journal</em></div>
       </div>
       <div class="classic-item">
         <div class="c-title">Korean Politics, in Short: A Multimodal Analysis of YouTube Shorts by Members of the National Assembly</div>
@@ -221,14 +221,14 @@ body.classic-mode .cli-view{display:none}
 <script>
 var papers=[
 {title:"Local Participation in Federal Enforcement: Evidence from the 287(g) Program",badges:["jmp","diss"],category:["dissertation"],isJmp:true},
-{title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss","work"],coauthor:"with Nathan Lee",category:["dissertation"]},
+{title:"Bureaucratizing Justice: Executive Control in Immigration Courts",badges:["diss","review"],coauthor:"with Nathan Lee",category:["dissertation"]},
 {title:"Bureaucratic Control and Compliance: Evidence from Assistant U.S. Attorneys",badges:["diss","work"],category:["dissertation"]},
 {title:"Speech and Voice in Politics: Multimodal Analysis of Presidential Addresses to the Korean National Assembly",badges:["forth"],authors:"Yang, Kyusik",journal:"Korea Observer, forthcoming (2026)",category:["published"]},
 {title:"South Korea in 2025: Democratic Comeback and the Challenges of Institutional Resilience",badges:["pub"],authors:"Jin, Youngjae and Kyusik Yang",journal:"Asian Survey 66(2): 230\u2013240 (2026)",category:["published"]},
 {title:"Resilient Democracy or Fragile Democracy? The Declaration of Martial Law and Presidential Impeachment in South Korea",badges:["pub"],authors:"Jin, Youngjae and Kyusik Yang",journal:"Asian Survey 65(6): 729\u2013750 (2025)",category:["published"]},
 {title:"Measuring Legislators' Ideology and Analyzing Ideological Differences Across Standing Committees Using Wordfish",badges:["pub","korean"],authors:"Cho, Eunmi, Sinjae Kang, Kyusik Yang, Yongjai Yu, and Yoonseok Lee",journal:"Journal of Research Methodology 9(3): 33\u201379 (2024)",category:["published"]},
 {title:"Appropriate Size for the National Assembly of the Republic of Korea",badges:["pub","korean"],authors:"Yang, Kyusik and Youngjae Jin",journal:"Journal of Parliamentary Research 12(1): 277\u2013281 (2017)",category:["published"]},
-{title:"Style Over Substance: How Citizens Evaluate the Quality of Public Petitions",badges:["review"],coauthor:"with Seo-young Silvia Kim and Byungkoo Kim",category:["working"]},
+{title:"Style Over Substance: How Citizens Evaluate the Quality of Public Petitions",badges:["rr"],coauthor:"with Seo-young Silvia Kim and Byungkoo Kim",meta:"R&R at <i>Policy Studies Journal</i>",category:["working"]},
 {title:"Korean Politics, in Short: A Multimodal Analysis of YouTube Shorts by Members of the National Assembly",badges:[],coauthor:"with Yongjai Yu",category:["working"]},
 {title:"Populist Strategies in Korean Election Manifestos: An LLM-Based Quantitative Analysis",badges:[],meta:"Invited and In Preparation for <i>Political Studies Review</i>",category:["working"]},
 {title:"Expertise on Demand: Executive Power and the Politics of Policy Knowledge in South Korea",badges:[],coauthor:"with Sunghyun Kim and Jaehak Kim",category:["working"]},
@@ -237,7 +237,7 @@ var papers=[
 {title:"Unbalanced Battlegrounds: Interest Groups' Venue Choice Revisited",badges:[],category:["working"]}
 ];
 var sectionCmds={all:'ls -la research/ --sort=date',dissertation:'cat dissertation/*.md',published:'ls publications/ --sort=date',working:'git log --oneline working-papers/'};
-var badgeLabels={jmp:'JMP',pub:'Published',review:'Under Review',diss:'Dissertation',korean:'\ud55c\uad6d\uc5b4',forth:'Forthcoming',work:'Working'};
+var badgeLabels={jmp:'JMP',pub:'Published',review:'Under Review',rr:'R&R',diss:'Dissertation',korean:'\ud55c\uad6d\uc5b4',forth:'Forthcoming',work:'Working'};
 function renderPapers(f){var c=document.getElementById('papers-container');var fl=f==='all'?papers:papers.filter(function(p){return p.category.indexOf(f)!==-1});var h='';var d=0;fl.forEach(function(p){var j=p.isJmp?' jmp':'';var b=p.badges.map(function(x){return'<span class="badge '+x+'">'+badgeLabels[x]+'</span>'}).join(' ');var m='';if(p.authors)m+='<span class="paper-authors">'+p.authors+'</span>';if(p.coauthor)m+='<span class="paper-coauthor">'+p.coauthor+'</span>';if(p.journal)m+='<span class="paper-journal">'+p.journal+'</span>';if(p.meta)m+='<span style="color:var(--dim);font-size:11px">'+p.meta+'</span>';h+='<div class="paper-card'+j+'" style="animation-delay:'+d+'ms"><div class="paper-title">'+p.title+'</div><div class="paper-meta">'+b+m+'</div></div>';d+=60});c.innerHTML=h}
 function filterPapers(f,btn){document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active')});btn.classList.add('active');document.getElementById('cli-section-cmd').innerHTML='<span class="prompt-symbol">&#10095; </span><span class="cmd-exec">'+sectionCmds[f]+'</span>';renderPapers(f)}
 function setMode(m){if(m==='classic')document.body.classList.add('classic-mode');else document.body.classList.remove('classic-mode');updateLabels()}
