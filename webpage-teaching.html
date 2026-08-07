@@ -157,7 +157,7 @@ body.classic-mode .cli-view{display:none}
         <div class="hero-name"><span class="glow">Teaching</span></div>
         <div class="hero-sub">NYU &amp; Yonsei &#183; Methods &amp; Substantive Courses <span class="tag">teaching portfolio</span></div>
         <div class="nav-tabs">
-          <button class="nav-tab active" onclick="filterCards('all',this)">All <span class="count">(3)</span></button>
+          <button class="nav-tab active" onclick="filterCards('all',this)">All <span class="count">(9)</span></button>
           <button class="nav-tab" onclick="filterCards('resources',this)">Resources <span class="count">(2)</span></button>
           <button class="nav-tab" onclick="filterCards('nyu',this)">NYU <span class="count">(2)</span></button>
           <button class="nav-tab" onclick="filterCards('yonsei',this)">Yonsei <span class="count">(5)</span></button>
@@ -181,7 +181,7 @@ body.classic-mode .cli-view{display:none}
       <div class="classic-pkg-frame">
         <div class="pkg-title">assemblykor <span class="c-badge new">New</span> <span class="c-badge pkg">R Package</span></div>
         <div class="pkg-desc">
-          An R package providing curated Korean National Assembly datasets for teaching quantitative methods in political science. A Korean politics counterpart to <a href="https://allisonhorst.github.io/palmerpenguins/" target="_blank" style="color:var(--nyu)">palmerpenguins</a>. Ships 7 ready-to-use datasets and 6 interactive Korean-language tutorials covering the full methods sequence from tidyverse basics to network analysis.
+          An R package providing curated Korean National Assembly datasets for teaching quantitative methods in political science. A Korean politics counterpart to <a href="https://allisonhorst.github.io/palmerpenguins/" target="_blank" style="color:var(--nyu)">palmerpenguins</a>. Ships 7 ready-to-use datasets and 9 interactive Korean-language tutorials covering the full methods sequence from tidyverse basics to network analysis.
         </div>
         <div class="pkg-stats">
           <span><strong>7</strong> datasets</span>
@@ -283,9 +283,9 @@ body.classic-mode .cli-view{display:none}
 <script>
 var items=[
 {title:"assemblykor",type:"resources",category:["resources"],featured:true,
- desc:"R package for teaching quantitative methods with Korean National Assembly data. 7 datasets, 6 interactive tutorials, 460k+ records.",
+ desc:"R package for teaching quantitative methods with Korean National Assembly data. 7 datasets, 9 interactive tutorials, 460k+ records.",
  badges:["new","pkg"],
- stats:[{n:"7",label:"datasets"},{n:"6",label:"tutorials"},{n:"460k+",label:"records"}],
+ stats:[{n:"7",label:"datasets"},{n:"9",label:"tutorials"},{n:"460k+",label:"records"}],
  links:[{label:"GitHub",url:"https://github.com/kyusik-yang/assemblykor"},{label:"Tutorials",url:"https://kyusik-yang.github.io/assemblykor/"},{label:"Explorer",url:"https://kyusik-yang.github.io/kna/"},{label:"Uijeong Jido 의정지도",url:"https://kyusik-yang.github.io/kna/voteview.html"},{label:"kna CLI",url:"https://github.com/kyusik-yang/kna"}],
  install:"install.packages(\"assemblykor\")",
  tutorials:[
@@ -294,7 +294,10 @@ var items=[
    {num:"3",title:"Regression",topic:"OLS, interactions"},
    {num:"4",title:"Panel Data & FE",topic:"FE, DiD"},
    {num:"5",title:"Text Analysis",topic:"TF-IDF, keywords"},
-   {num:"6",title:"Network Analysis",topic:"centrality, community"}
+   {num:"6",title:"Network Analysis",topic:"centrality, community"},
+   {num:"7",title:"Roll Call Analysis",topic:"voting patterns, ideal points"},
+   {num:"8",title:"Bill Success",topic:"passage rates, survival"},
+   {num:"9",title:"Speech Patterns",topic:"committee speech analysis"}
  ]},
 {title:"Multimodal Embedding for Political Science",type:"resources",category:["resources"],featured:true,
  desc:"Open research notebook & methods tutorial for embedding Korean politicians' YouTube Shorts into a shared vector space using Gemini Embedding 2. From API setup to panel regression, for political scientists without ML background. With Yongjai Yu (UC Riverside).",
